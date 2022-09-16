@@ -1,0 +1,112 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer-secondary {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 30px;
+  padding-bottom: 40px;
+
+  background-color: #f5f5fa;
+
+  gap: $gap;
+  @include md {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    gap: $gap;
+  }
+}
+
+.footer-secondary::after {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  left: 20px;
+
+  height: 4px;
+
+  content: "";
+
+  background-color: #e6e6f0;
+}
+
+.info-contact {
+  display: flex;
+
+  gap: $gap;
+  @include sm {
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+  &__address {
+    &-link {
+      color: #323264;
+
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19px;
+    }
+  }
+
+  &__link {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #24a3ff;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+  }
+}
+
+.info-social {
+  display: flex;
+  align-items: center;
+
+  gap: $gap;
+  @include sm {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__number-tel {
+    color: #46466e;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+  }
+
+  &__mail-link {
+    color: #24a3ff;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+  }
+}
+
+.footer-secondary__copyright {
+  color: #b3b3ba;
+
+  font-size: 16px;
+  line-height: 19px;
+
+  @include sm {
+    max-width: 297px;
+
+    text-align: center;
+  }
+}

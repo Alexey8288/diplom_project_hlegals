@@ -1,0 +1,154 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+
+.main-about {
+  position: relative;
+
+  margin-top: 73px;
+
+  @include sm {
+    margin-top: 40px;
+  }
+}
+
+.service {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 100px;
+
+  gap: 62px;
+  @include xl {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+  @include sm {
+    margin-bottom: 45px;
+  }
+}
+
+
+.service-contant {
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+  @include xl-min {
+    max-width: 633px;
+  }
+}
+
+.service-contant__title {
+  margin: 0;
+
+  background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+          background-clip: text;
+
+  font-size: 42px;
+  line-height: 50px;
+
+  @include sm {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+}
+
+.service-contant__description {
+  font-size: 21px;
+  line-height: 30px;
+
+  @include sm {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.service-rating {
+  position: relative;
+
+  @include xl {
+    border-top: solid 4px #e6e6f0;
+  }
+
+
+  &::after {
+    @include xl-min {
+      position: absolute;
+      top: 7px;
+      bottom: 55px;
+      left: -24px;
+
+      width: 4px;
+
+      content: "";
+
+      background-color: #e6e6f0;
+    }
+  }
+}
+
+
+.rating-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 37px;
+  @include xl-sm {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @include xl {
+    padding-top: 15px;
+  }
+}
+
+
+.rating-item__logo {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+  @include xl-sm {
+    max-width: 314px;
+  }
+}
+
+.rating-item__picture {
+  display: flex;
+
+  gap: 6px;
+  @include md-sm {
+    justify-content: center;
+  }
+}
+
+.rating-item__number {
+  text-align: center;
+
+  background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+          background-clip: text;
+
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+
+  -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+}
+
+.rating-item__description {
+  color: #323264;
+
+  font-size: 18px;
+  line-height: 21px;
+
+  @include md-sm {
+    text-align: center;
+  }
+}

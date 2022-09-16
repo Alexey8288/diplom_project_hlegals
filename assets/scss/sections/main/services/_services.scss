@@ -1,0 +1,94 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.services {
+  position: relative;
+
+  margin-bottom: 62px;
+  padding-bottom: 79px;
+
+  border-radius: 0 0 12px 12px;
+  background: linear-gradient(193deg, #323264 11.93%, #323264 57.17%, #643e72 87.46%);
+
+  @include sm {
+    padding-bottom: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 100%;
+    right: 40px;
+    left: 40px;
+
+    height: 20px;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background-color: $color-gray-separator;
+  }
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    left: 20px;
+
+    height: 10px;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background-color: #cacadb;
+  }
+
+  &__link {
+    padding-bottom: 3px;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    opacity: 0.5;
+    color: #ffffff;
+
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__title {
+    margin-top: 3px;
+    margin-bottom: 68px;
+
+    background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+    -webkit-background-clip: text;
+            background-clip: text;
+
+    font-size: 42px;
+    line-height: 50px;
+
+    @include sm {
+      margin-bottom: 23px;
+
+      font-size: 32px;
+      line-height: 38px;
+    }
+    -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+  }
+
+  &-grid {
+    display: grid;
+
+    gap: 40px;
+    @include lg-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include lg-sm {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

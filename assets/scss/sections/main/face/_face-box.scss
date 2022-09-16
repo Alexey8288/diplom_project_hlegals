@@ -1,0 +1,108 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+
+
+.face-box {
+  display: flex;
+
+  margin-bottom: 20px;
+
+  border-radius: 12px;
+  background-color: #f5f5fa;
+
+  gap: 40px;
+
+
+
+  &__picture {
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__image {
+    height: 100%;
+  }
+}
+
+.face-contant {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include lg {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+
+  &__flex {
+    display: flex;
+  }
+
+  &__title {
+    padding-top: 3px;
+    padding-bottom: 20px;
+
+    background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+    -webkit-background-clip: text;
+            background-clip: text;
+
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 50px;
+
+    @include lg {
+      font-size: 32px;
+      line-height: 38px;
+    }
+    -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+  }
+
+  &__name {
+    padding-bottom: 5px;
+
+    color: #b3b3ba;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+
+  &__about {
+    /* identical to box height, or 138% */
+    /* Grey / Text */
+    color: #b3b3ba;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+}
+
+
+
+.face-contant__link {
+  /* identical to box height */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /* Active / Regular */
+
+  color: #24a3ff;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+
+.face-contant__flex-pictures {
+  display: none;
+
+  margin-right: 10px;
+
+  @include lg {
+    display: block;
+  }
+}

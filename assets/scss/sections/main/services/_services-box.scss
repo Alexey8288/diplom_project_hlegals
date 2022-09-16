@@ -1,0 +1,63 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+
+.services-block {
+  display: grid;
+
+  max-width: 413px;
+
+  gap: 0 20px;
+  grid-template-areas: "pic"
+  "tit"
+  "des";
+  @include sm {
+    align-items: center;
+
+    gap: 0 10px;
+    grid-template-areas: "pic tit"
+    "des des";
+    grid-template-columns: auto 1fr;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+
+    color: #24a3ff;
+
+    font-size: 24px;
+    line-height: 28px;
+
+    grid-area: tit;
+    @include sm {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__picture {
+    // margin-bottom: 20px;
+    max-width: 64px;
+    margin-bottom: 5px;
+
+    grid-area: pic;
+  }
+
+  &__image {
+    @include sm {
+      width: 64px;
+    }
+  }
+
+  &__description {
+    color: #ffffff;
+
+    font-size: 18px;
+    line-height: 26px;
+
+    grid-area: des;
+    @include sm {
+      font-size: 16px;
+    }
+  }
+}

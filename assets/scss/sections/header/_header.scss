@@ -1,0 +1,62 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header {
+  position: relative;
+
+  overflow: hidden;
+
+  height: 100vh;
+
+  background: $bg-gradient-1;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+
+    background-image: url(../img/logobackground.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 85vh, 70vh;
+  }
+
+  &::after {
+    content: "";
+
+    background: linear-gradient(180deg, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
+
+    @include abs-position(70%);
+  }
+}
+
+.header-menu {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  justify-content: space-between;
+
+  padding-top: 50px;
+
+  gap: 11px 20px;
+  grid-template-areas: "logo info"
+  "logo nav";
+  //@include md
+  @include lg {
+    padding-top: 20px;
+
+    gap: $gap;
+    grid-template-areas: "info info"
+    "logo logo"
+    "nav nav";
+  }
+  @include sm {
+    grid-template-areas: "info info"
+    "logo nav";
+  }
+}

@@ -1,0 +1,25 @@
+@use "../../libs/normalize.css";
+
+@use "common";
+
+@use "sections/header";
+
+@use "sections/main/experience";
+
+@use "sections/main/services";
+
+@use "sections/main/face";
+
+@use "sections/main/cases";
+
+@use "sections/main/brands";
+
+@use "sections/footer";
+
+@use "pages/about/header-about";
+
+@use "pages/about/main-about/service";
+
+@use "pages/about/main-about/team";
+
+@use "pages/about/footer-about";

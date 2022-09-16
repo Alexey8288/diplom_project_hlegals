@@ -1,0 +1,146 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+
+.footer {
+  background-color: #f5f5fa;
+}
+
+.footer-primary {
+  position: relative;
+
+  padding-top: 40px;
+
+  @include sm {
+    margin-bottom: 150px;
+  }
+}
+
+.footer-primary__box {
+  position: relative;
+
+  display: grid;
+
+  @include xl {
+    grid-template-rows: 41% 11% 3%;
+  }
+  @include lg-min {
+    gap: 40px;
+    grid-template-areas: "a1 a2 a3"
+    "a4 a2 a3"
+    "a4 a5 a3"
+    "a4 a5 a6";
+    grid-template-rows: 37% 17% 3%;
+  }
+  @include lg {
+    gap: 20px;
+    grid-template-areas: "a1 a2"
+    "a3 a2"
+    "a3 a4"
+    "a5 a4"
+    "a5 a6";
+    grid-template-rows: 20% 11% 21% 8% 35%;
+  }
+  @include md {
+    gap: 20px;
+    grid-template-areas: "a1"
+    "a2"
+    "a3"
+    "a4"
+    "a5"
+    "a6";
+    grid-template-rows: 5% 20% 20% 20% 20% 5% 1%;
+  }
+  @include sm {
+    gap: 20px;
+    grid-template-areas: "a1"
+    "a2"
+    "a3"
+    "a4"
+    "a5"
+    "a6";
+    grid-template-rows: 16% 38% 1% 41%;
+  }
+}
+
+.footer-primary__box::after {
+  @include sm-min {
+    position: absolute;
+    top: 70%;
+    right: -5px;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+
+    background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #f5f5fa 86.5%);
+  }
+}
+
+.footer-primary__link {
+  margin-top: 40px;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #24a3ff;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+.footer-primary__title {
+  margin-bottom: 40px;
+
+  background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+          background-clip: text;
+
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 50px;
+
+  @include sm {
+    margin-bottom: 20px;
+
+    font-size: 32px;
+    line-height: 38px;
+  }
+  -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+}
+
+.footer-primary__button {
+  position: absolute;
+  bottom: 42px;
+  left: 50%;
+
+  min-width: 250px;
+  height: 50px;
+
+  cursor: pointer;
+  transform: translateX(-50%);
+
+  border-radius: 12px;
+  background: #24a3ff;
+  box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+
+  @include sm {
+    bottom: -110px;
+  }
+
+  &-link {
+    display: block;
+
+    padding: 1em 1em;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+  }
+}

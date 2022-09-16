@@ -1,0 +1,97 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.footer-about {
+  border-radius: 12px 12px 0 0;
+  background-color: #f5f5fa;
+}
+
+.footer-primary__about {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.primary-about {
+  margin-right: auto;
+  margin-left: auto;
+
+  &__title {
+    margin-bottom: 30px;
+
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #323264;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+  }
+
+  .primary-about__item-picture--sm {
+    @include md {
+      display: none;
+    }
+  }
+
+  .face-indicator--md {
+    @include md-min {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    gap: 40px;
+    @include md-min {
+      flex-wrap: wrap;
+    }
+
+    &-picture {
+      position: relative;
+
+      width: 300px;
+      height: 109px;
+
+      border-radius: 12px;
+      background: #ffffff;
+
+      @include sm {
+        height: 57px;
+      }
+    }
+
+    &-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      height: 60px;
+
+      transform: translate(-50%, -50%);
+
+      @include sm {
+        height: 31px;
+      }
+    }
+  }
+}
+
+.face-indicator {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 40px;
+
+  opacity: 0.2;
+  border-radius: 8px;
+  background: #24a3ff;
+
+  &.active {
+    opacity: 1;
+  }
+}
